@@ -19,7 +19,7 @@ public class Ingredient : MonoBehaviour
     public const float THIRD = 0.33f;
     public const float QUARTER = 0.25f;
 
-    public Sprite icon;
+    public Material icon;
     public IngredientID id;
     public string name;
 

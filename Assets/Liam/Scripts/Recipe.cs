@@ -19,7 +19,7 @@ public class Recipe
         {
             RecipeComponent newComponent = new RecipeComponent();
             newComponent.GenerateEquation();
-            newComponent.SetIngredient(ingrList[Random.Range(0, ingrList.Length - 1)]); //Randomly assign an ingredient to it
+            newComponent.SetIngredient(ingrList[Random.Range(0, ingrList.Length)]); //Randomly assign an ingredient to it
             
             components.Add(newComponent);
         }

@@ -7,4 +7,10 @@ public class RecipeComponentUI : MonoBehaviour
 {
     public MeshRenderer icon;
     public TextMeshPro equationText;
+
+    public void UpdateComponentUI(Material _icon, string _equationText)
+    {
+        icon.material = _icon;
+        equationText.SetText(_equationText);
+    }
 }
