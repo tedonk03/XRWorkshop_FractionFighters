@@ -51,6 +51,7 @@ public class Manager : MonoBehaviour
             //Move to next ingredient in the recipe
             if (theRecipe.currentIngrIndex + 1 < theRecipe.components.Count)
             {
+                recipeDisplay.HideBorder(theRecipe.currentIngrIndex);
                 Debug.Log("Moving to next component");
                 theRecipe.currentIngrIndex++;
                 cauldron.ResetCauldron();

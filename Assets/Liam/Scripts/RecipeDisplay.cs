@@ -19,7 +19,13 @@ public class RecipeDisplay : MonoBehaviour
 
     public void HighlightCurrentComponent(int componentIndex)
     {
-        components[componentIndex].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.cyan);
+        components[componentIndex].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow);
+        components[componentIndex].border.SetActive(true);
+    }
+
+    public void HideBorder(int componentIndex)
+    {
+        components[componentIndex].border.SetActive(false);
     }
 
     public void SetRecipe(Recipe _recipe)
