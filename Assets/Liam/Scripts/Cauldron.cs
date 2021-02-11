@@ -8,7 +8,7 @@ public class Cauldron : MonoBehaviour
     private Ingredient currentIngredient;
     [SerializeField]
     private float ingredientAmount;
-    private Testing test;
+    private Manager manager;
 
     //Counter to keep track of which ingredient in the recipe the player is currently trying to deal with
 
@@ -37,9 +37,9 @@ public class Cauldron : MonoBehaviour
         currentRecipe = recipe;
     }
 
-    public void SetManager(Testing _test)
+    public void SetManager(Manager _manager)
     {
-        test = _test;
+        manager = _manager;
     }
 
     //Could put these method inside recipe?? just parse the info from this object

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.XR;
 
 public class Testing : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Testing : MonoBehaviour
         recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
 
         cauldron.SetRecipe(theRecipe);
-        cauldron.SetManager(this);
+        //cauldron.SetManager(this);
 
         
     }
