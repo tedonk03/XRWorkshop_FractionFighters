@@ -46,6 +46,7 @@ public class SplitFruit : MonoBehaviour
 
     private void OnMouseUp()
     {
+        Debug.Log("mouse up");
         floaterScript.EnableFloating();
         if (Time.time - downClickTime <= clickDeltaTime)
         {
