@@ -7,6 +7,7 @@ public class RecipeComponentUI : MonoBehaviour
 {
     public MeshRenderer icon;
     public TextMeshPro equationText;
+    public GameObject border;
 
     public void UpdateComponentUI(Material _icon, string _equationText)
     {

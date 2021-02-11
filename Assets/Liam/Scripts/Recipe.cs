@@ -7,17 +7,12 @@ public class Recipe
     public string recipeName;
     //Amount required - display to player & actual amount required
     public List<RecipeComponent> components = new List<RecipeComponent>();
-    public bool CheckRecipe()
-    {
-        //Checks against what's in the pot
-        return true;
-    }
+    public int currentIngrIndex = 0;
 
     public void GenerateRecipeName()
     {
-        //TODO: Create a way to randomly generate a name or grab a name from an array of names
-        //TEMP CODE
-        recipeName = "Magic Soup";
+        string[] foodNames = { "Slimey Soup", "Superb Stew", "Lazy Lasgna", "Bitter Bread", "Nasty Noodles" };
+        recipeName = foodNames[Random.Range(0, foodNames.Length)];
     }
 
     public void GenerateComponents(int amount, Ingredient[] ingrList)

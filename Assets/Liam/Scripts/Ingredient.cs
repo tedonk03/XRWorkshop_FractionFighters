@@ -4,12 +4,10 @@ using UnityEngine;
 
 public enum IngredientID
 {
-    I1,
-    I2,
-    I3,
-    I4,
-    I5,
-    I6
+    APPLE,
+    PUMPKIN,
+    BUTTER,
+    CHEESE,
 }
 
 public class Ingredient : MonoBehaviour

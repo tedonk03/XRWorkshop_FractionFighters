@@ -19,7 +19,13 @@ public class RecipeDisplay : MonoBehaviour
 
     public void HighlightCurrentComponent(int componentIndex)
     {
-        components[componentIndex].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.cyan);
+        components[componentIndex].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow);
+        components[componentIndex].border.SetActive(true);
+    }
+
+    public void HideBorder(int componentIndex)
+    {
+        components[componentIndex].border.SetActive(false);
     }
 
     public void SetRecipe(Recipe _recipe)
@@ -35,6 +41,7 @@ public class RecipeDisplay : MonoBehaviour
         foreach(RecipeComponentUI comp in components)
         {
             comp.gameObject.SetActive(false);
+            comp.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red);
         }
 
         //Display the recipe component's icon and equation text onto the recipe display ui for the player to see

@@ -8,7 +8,7 @@ public class Cauldron : MonoBehaviour
     private Ingredient currentIngredient;
     [SerializeField]
     private float ingredientAmount;
-    private Testing test;
+    private Manager manager;
 
     //Counter to keep track of which ingredient in the recipe the player is currently trying to deal with
 
@@ -27,7 +27,7 @@ public class Cauldron : MonoBehaviour
 
     public void ResetCauldron()
     {
-        currentRecipe = null;
+        //currentRecipe = null;
         currentIngredient = null;
         ingredientAmount = 0f;
     }
@@ -37,17 +37,17 @@ public class Cauldron : MonoBehaviour
         currentRecipe = recipe;
     }
 
-    public void SetManager(Testing _test)
+    public void SetManager(Manager _manager)
     {
-        test = _test;
+        manager = _manager;
     }
 
     //Could put these method inside recipe?? just parse the info from this object
-    public bool CheckIngredients()
+    public bool CheckIngredients(int currentComponentIndex)
     {
-        if(currentRecipe.components[0].ingredient.id == currentIngredient.id)
+        if(currentRecipe.components[currentComponentIndex].ingredient.id == currentIngredient.id)
         {
-            if(currentRecipe.components[0].answer == ingredientAmount)
+            if(currentRecipe.components[currentComponentIndex].answer == ingredientAmount)
             {
                 Debug.Log("Correct amount put into the cauldron");
                 return true;
@@ -70,7 +70,7 @@ public class Cauldron : MonoBehaviour
         if(other.CompareTag("Ingredient"))
         {
             Ingredient ingrt = other.GetComponent<Ingredient>();
-            if(ingrt.id == currentRecipe.components[0].ingredient.id)
+            if(ingrt.id == currentRecipe.components[currentRecipe.currentIngrIndex].ingredient.id)
             {
                 Debug.Log("Correct Ingredient");
                 currentIngredient = ingrt;

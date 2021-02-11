@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.XR;
 
-public class Testing : MonoBehaviour
+public class Manager : MonoBehaviour
 {
     public Ingredient[] ingredients;
     private Recipe theRecipe;
@@ -15,7 +14,7 @@ public class Testing : MonoBehaviour
     {
         GenerateRecipe();
 
-        foreach(RecipeComponent c in theRecipe.components)
+        foreach (RecipeComponent c in theRecipe.components)
         {
             Debug.Log("Ingredient: " + c.ingredient + " Equation: " + c.equation);
         }
@@ -25,15 +24,15 @@ public class Testing : MonoBehaviour
         recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
 
         cauldron.SetRecipe(theRecipe);
-        //cauldron.SetManager(this);
+        cauldron.SetManager(this);
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void GenerateRecipe()
@@ -47,11 +46,12 @@ public class Testing : MonoBehaviour
 
     public void ConfirmAnswer()
     {
-        if(cauldron.CheckIngredients(theRecipe.currentIngrIndex))
+        if (cauldron.CheckIngredients(theRecipe.currentIngrIndex))
         {
             //Move to next ingredient in the recipe
-            if(theRecipe.currentIngrIndex + 1 < theRecipe.components.Count)
+            if (theRecipe.currentIngrIndex + 1 < theRecipe.components.Count)
             {
+                recipeDisplay.HideBorder(theRecipe.currentIngrIndex);
                 Debug.Log("Moving to next component");
                 theRecipe.currentIngrIndex++;
                 cauldron.ResetCauldron();
@@ -82,3 +82,4 @@ public class Testing : MonoBehaviour
         cauldron.SetRecipe(theRecipe);
     }
 }
+
