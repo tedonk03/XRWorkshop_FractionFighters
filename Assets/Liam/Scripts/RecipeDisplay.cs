@@ -24,6 +24,7 @@ public class RecipeDisplay : MonoBehaviour
 
     public void DisplayRecipe()
     {
+        title.text = recipe.recipeName;
         //For each item in the recipe, instantiate the icon and amount needed for it onto the recipe display
         //Disable all the recipe components initially
         foreach(RecipeComponentUI comp in components)

@@ -30,6 +30,7 @@ public class Testing : MonoBehaviour
     {
         Recipe newRecipe = new Recipe();
         newRecipe.GenerateComponents(6, ingredients);
+        newRecipe.GenerateRecipeName();
         theRecipe = newRecipe;
     }
 }
