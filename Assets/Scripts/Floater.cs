@@ -43,6 +43,7 @@ public class Floater : MonoBehaviour
 
     private void Hover()
     {
+        //var randomSpeed = Random.Range(0.1f, speed);
         tempPos.y = tempVal.y + amplitude * Mathf.Sin(speed * Time.time);
         transform.position = tempPos;
     }

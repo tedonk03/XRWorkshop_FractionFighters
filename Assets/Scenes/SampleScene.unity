@@ -1805,6 +1805,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4798f89d3f624cd4eb33feaf80367ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    volumeVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    volumeVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    volumeVariance: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1240308927
 Transform:
   m_ObjectHideFlags: 0
@@ -2591,7 +2610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096047660541748286, guid: ef77fc63709ea7442a85bdc134c095ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.8271728
+      value: 6.512
       objectReference: {fileID: 0}
     - target: {fileID: 1096047660541748286, guid: ef77fc63709ea7442a85bdc134c095ab, type: 3}
       propertyPath: m_LocalPosition.z
