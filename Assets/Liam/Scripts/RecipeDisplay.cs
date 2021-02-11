@@ -17,6 +17,11 @@ public class RecipeDisplay : MonoBehaviour
         
     }
 
+    public void HighlightCurrentComponent()
+    {
+
+    }
+
     public void SetRecipe(Recipe _recipe)
     {
         recipe = _recipe;
