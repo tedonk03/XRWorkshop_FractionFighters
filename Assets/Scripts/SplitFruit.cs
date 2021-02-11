@@ -26,7 +26,6 @@ public class SplitFruit : MonoBehaviour
 
     }
 
-
     private void OnMouseDrag()
     {
         floaterScript.DisableFloating();
@@ -45,9 +44,6 @@ public class SplitFruit : MonoBehaviour
         transform.position = newPos;
     }
 
-
-   
-
     private void OnMouseUp()
     {
         floaterScript.EnableFloating();
@@ -63,8 +59,10 @@ public class SplitFruit : MonoBehaviour
             // safe check
             return;
 
+        AudioManager.Instance.Play("split");
+
         // instantiate prefabs, depends on split mode
-        var childIndex = 0; // TODO: replace this later
+        var childIndex = 0; // TODO: replace this later, if we have a list of possible fractions
         GameObject.Instantiate(splitVFX, this.transform.position, Quaternion.identity);
 
         var randomAngle = Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
