@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SplitFruit : MonoBehaviour
 {
-    public GameObject[] splitPrefabs;
+    public GameObject splitPrefab;
     public GameObject splitVFX;
 
 
@@ -14,7 +14,7 @@ public class SplitFruit : MonoBehaviour
     private float downClickTime;
     private readonly float clickDeltaTime = 0.2f;
 
-    private Floater floaterScript;
+    //private Floater floaterScript;
 
     void Start()
     {
@@ -22,13 +22,13 @@ public class SplitFruit : MonoBehaviour
 
         cameraZdistance = mainCamera.WorldToScreenPoint(transform.position).z;
         
-        floaterScript = GetComponent<Floater>();
+        //floaterScript = GetComponent<Floater>();
 
     }
 
     private void OnMouseDrag()
     {
-        floaterScript.DisableFloating();
+        //floaterScript.DisableFloating();
         MoveObject();
         
     }
@@ -47,7 +47,7 @@ public class SplitFruit : MonoBehaviour
     private void OnMouseUp()
     {
         Debug.Log("mouse up");
-        floaterScript.EnableFloating();
+        //floaterScript.EnableFloating();
         if (Time.time - downClickTime <= clickDeltaTime)
         {
             Split();
@@ -56,20 +56,19 @@ public class SplitFruit : MonoBehaviour
 
     public void Split()
     {
-        Debug.Log("Split");
-        if (splitPrefabs.Length == 0)
+        //Debug.Log("Split");
+        if (splitPrefab == null)
             // safe check
             return;
 
         AudioManager.Instance.Play("split");
 
         // instantiate prefabs, depends on split mode
-        var childIndex = 0; // TODO: replace this later, if we have a list of possible fractions
         GameObject.Instantiate(splitVFX, this.transform.position, Quaternion.identity);
 
-        var randomAngle = Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
-        GameObject.Instantiate(splitPrefabs[childIndex], this.transform.position, randomAngle);
-        
+        GameObject.Instantiate(splitPrefab, this.transform.position, Quaternion.identity);
+        GameObject.Instantiate(splitPrefab, this.transform.position, Quaternion.Inverse(Quaternion.identity));
+
         // destroy the parent
         Destroy(this.gameObject);
     }
