@@ -56,6 +56,7 @@ public class SplitFruit : MonoBehaviour
 
     public void Split()
     {
+        Debug.Log("Split");
         if (splitPrefabs.Length == 0)
             // safe check
             return;
@@ -68,7 +69,7 @@ public class SplitFruit : MonoBehaviour
 
         var randomAngle = Quaternion.Euler(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)));
         GameObject.Instantiate(splitPrefabs[childIndex], this.transform.position, randomAngle);
-
+        
         // destroy the parent
         Destroy(this.gameObject);
     }
