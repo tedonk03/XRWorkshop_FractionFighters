@@ -10,6 +10,9 @@ public class Cauldron : MonoBehaviour
     private float ingredientAmount;
     private Testing test;
 
+    //Counter to keep track of which ingredient in the recipe the player is currently trying to deal with
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,7 @@ public class Cauldron : MonoBehaviour
         test = _test;
     }
 
+    //Could put these method inside recipe?? just parse the info from this object
     public bool CheckIngredients()
     {
         if(currentRecipe.components[0].ingredient.id == currentIngredient.id)
@@ -48,9 +52,16 @@ public class Cauldron : MonoBehaviour
                 Debug.Log("Correct amount put into the cauldron");
                 return true;
             }
+            else
+            {
+                Debug.Log("Incorrect amount");
+                return false;
+            }
         }
-
-        return false;
+        else
+        {
+            return false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,6 +82,8 @@ public class Cauldron : MonoBehaviour
                 currentIngredient = null;
                 ingredientAmount = 0f;
             }
+
+            Destroy(other.gameObject);
         }
     }
 
