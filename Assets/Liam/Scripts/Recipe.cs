@@ -7,6 +7,7 @@ public class Recipe
     public string recipeName;
     //Amount required - display to player & actual amount required
     public List<RecipeComponent> components = new List<RecipeComponent>();
+    public int currentIngrIndex = 0;
     public bool CheckRecipe()
     {
         //Checks against what's in the pot

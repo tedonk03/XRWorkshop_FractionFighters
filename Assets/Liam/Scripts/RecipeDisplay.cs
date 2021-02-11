@@ -35,6 +35,7 @@ public class RecipeDisplay : MonoBehaviour
         foreach(RecipeComponentUI comp in components)
         {
             comp.gameObject.SetActive(false);
+            comp.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.red);
         }
 
         //Display the recipe component's icon and equation text onto the recipe display ui for the player to see

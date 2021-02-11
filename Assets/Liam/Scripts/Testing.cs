@@ -21,7 +21,7 @@ public class Testing : MonoBehaviour
 
         recipeDisplay.SetRecipe(theRecipe);
         recipeDisplay.DisplayRecipe();
-        recipeDisplay.HighlightCurrentComponent(currentComponent);
+        recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
 
         cauldron.SetRecipe(theRecipe);
         cauldron.SetManager(this);
@@ -38,7 +38,7 @@ public class Testing : MonoBehaviour
     public void GenerateRecipe()
     {
         Recipe newRecipe = new Recipe();
-        newRecipe.GenerateComponents(6, ingredients);
+        newRecipe.GenerateComponents(2, ingredients);
         newRecipe.GenerateRecipeName();
         theRecipe = newRecipe;
         currentComponent = 0;
@@ -46,19 +46,38 @@ public class Testing : MonoBehaviour
 
     public void ConfirmAnswer()
     {
-        if(cauldron.CheckIngredients())
+        if(cauldron.CheckIngredients(theRecipe.currentIngrIndex))
         {
             //Move to next ingredient in the recipe
-            if(currentComponent < theRecipe.components.Count)
+            if(theRecipe.currentIngrIndex + 1 < theRecipe.components.Count)
             {
-                currentComponent++;
+                Debug.Log("Moving to next component");
+                theRecipe.currentIngrIndex++;
+                cauldron.ResetCauldron();
                 //Next component
-                recipeDisplay.HighlightCurrentComponent(currentComponent);
+                recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
             }
             else
             {
                 //Recipe is complete
+                Debug.Log("Recipe is done");
+                NextRecipe();
             }
         }
+        else
+        {
+            cauldron.ResetCauldron();
+        }
+    }
+
+    public void NextRecipe()
+    {
+        GenerateRecipe();
+
+        recipeDisplay.SetRecipe(theRecipe);
+        recipeDisplay.DisplayRecipe();
+        recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
+
+        cauldron.SetRecipe(theRecipe);
     }
 }
