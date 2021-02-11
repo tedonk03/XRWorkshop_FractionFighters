@@ -17,6 +17,11 @@ public class RecipeDisplay : MonoBehaviour
         
     }
 
+    public void HighlightCurrentComponent(int componentIndex)
+    {
+        components[componentIndex].GetComponent<MeshRenderer>().material.SetColor("_Color", Color.cyan);
+    }
+
     public void SetRecipe(Recipe _recipe)
     {
         recipe = _recipe;
