@@ -23,11 +23,10 @@ public class Ingredient : MonoBehaviour
     public IngredientID id;
     public string name;
 
-    [SerializeField]
-    private float fractionValue = WHOLE;
+    public float fractionValue = WHOLE;
 
-    public void Split(float splitAmount)
-    {
-        fractionValue *= splitAmount;
-    }
+    //public void Split(float splitAmount)
+    //{
+    //    fractionValue *= splitAmount;
+    //}
 }
