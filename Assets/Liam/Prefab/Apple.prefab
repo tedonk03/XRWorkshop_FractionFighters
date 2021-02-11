@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f13c218cf607e496590323f8745b9413, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f13c218cf607e496590323f8745b9413, type: 3}
 --- !u!1 &8139339393230793975 stripped

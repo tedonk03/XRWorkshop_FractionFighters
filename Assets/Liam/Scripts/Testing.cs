@@ -7,6 +7,7 @@ public class Testing : MonoBehaviour
     public Ingredient[] ingredients;
     private Recipe theRecipe;
     public RecipeDisplay recipeDisplay;
+    public Cauldron cauldron;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class Testing : MonoBehaviour
 
         recipeDisplay.SetRecipe(theRecipe);
         recipeDisplay.DisplayRecipe();
+
+        cauldron.SetRecipe(theRecipe);
+        cauldron.SetManager(this);
     }
 
     // Update is called once per frame

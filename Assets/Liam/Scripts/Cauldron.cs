@@ -6,7 +6,9 @@ public class Cauldron : MonoBehaviour
 {
     private Recipe currentRecipe;
     private Ingredient currentIngredient;
+    [SerializeField]
     private float ingredientAmount;
+    private Testing test;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,11 @@ public class Cauldron : MonoBehaviour
         currentRecipe = recipe;
     }
 
+    public void SetManager(Testing _test)
+    {
+        test = _test;
+    }
+
     public bool CheckIngredients()
     {
         if(currentRecipe.components[0].ingredient.id == currentIngredient.id)
@@ -39,8 +46,11 @@ public class Cauldron : MonoBehaviour
             if(currentRecipe.components[0].answer == ingredientAmount)
             {
                 Debug.Log("Correct amount put into the cauldron");
+                return true;
             }
         }
+
+        return false;
     }
 
     private void OnTriggerEnter(Collider other)
