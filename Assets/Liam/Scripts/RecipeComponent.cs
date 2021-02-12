@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RecipeComponent
 {
-    private float[] fractionChoices = { 0.5f, 0.25f, 0.125f };
+    private float[] fractionChoices = { 0.5f, 0.25f };
 
     //private Ingredient ingredients;
     public Ingredient ingredient;

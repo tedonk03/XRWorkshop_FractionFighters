@@ -134,6 +134,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   amplitude: 0.5
+--- !u!114 &7178156592349878636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935521265256483041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  id: 0
+  name: AppleQuart
+  fractionValue: 0.25
 --- !u!1001 &7853857778162136496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +216,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
       propertyPath: m_Name
       value: apple4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}

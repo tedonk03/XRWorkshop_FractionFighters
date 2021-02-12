@@ -8,7 +8,15 @@ public class Manager : MonoBehaviour
     private Recipe theRecipe;
     public RecipeDisplay recipeDisplay;
     public Cauldron cauldron;
-    public int currentComponent;
+    //public int currentComponent;
+    private AudioManager audio;
+    public Menu mainMenu;
+
+    private void Awake()
+    {
+        audio = FindObjectOfType<AudioManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,17 +43,47 @@ public class Manager : MonoBehaviour
 
     }
 
+    public void OpenMainMenu()
+    {
+        mainMenu.ToggleMenu(true);
+    }
+
+    public void CloseMainMenu()
+    {
+        mainMenu.ToggleMenu(false);
+    }
+
+    public void QuitApplication()
+    {
+        
+    }
+
+    public void StartGame()
+    {
+        //Delete all existing ingredients if any, reset the recipe and set starting camera angle
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Ingredient"))
+        {
+            Destroy(obj);
+        }
+
+        mainMenu.ToggleMenu(false);
+        GenerateRecipe();
+        GameObject.FindGameObjectWithTag("MainCamera").transform.rotation = new Quaternion(0, -164f, 0, 0);
+    }
+
     public void GenerateRecipe()
     {
         Recipe newRecipe = new Recipe();
         newRecipe.GenerateComponents(2, ingredients);
         newRecipe.GenerateRecipeName();
         theRecipe = newRecipe;
-        currentComponent = 0;
+        //currentComponent = 0;
+        theRecipe.currentIngrIndex = 0;
     }
 
     public void ConfirmAnswer()
     {
+        //Check if the ingredient is correct
         if (cauldron.CheckIngredients(theRecipe.currentIngrIndex))
         {
             //Move to next ingredient in the recipe
@@ -55,18 +93,21 @@ public class Manager : MonoBehaviour
                 Debug.Log("Moving to next component");
                 theRecipe.currentIngrIndex++;
                 cauldron.ResetCauldron();
+                audio.Play("correct");
                 //Next component
                 recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
             }
             else
             {
                 //Recipe is complete
+                audio.Play("success");
                 Debug.Log("Recipe is done");
                 NextRecipe();
             }
         }
         else
         {
+            audio.Play("fail");
             cauldron.ResetCauldron();
         }
     }

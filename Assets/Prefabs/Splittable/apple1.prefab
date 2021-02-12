@@ -9,9 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320220291013431838}
+  - component: {fileID: 6352161753238650621}
+  - component: {fileID: 285189336668117194}
+  - component: {fileID: 2264968670518401594}
+  - component: {fileID: 4941870446580742365}
+  - component: {fileID: 7714526672415619628}
+  - component: {fileID: 1899462062933267430}
   m_Layer: 0
   m_Name: apple1
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,60 +29,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806711339015469518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2942663124302950500}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2787923213268229775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2942663124302950500}
-  - component: {fileID: 8446020386241866736}
-  - component: {fileID: 3378844928995937735}
-  - component: {fileID: 3638885126367645495}
-  - component: {fileID: 7603254038406753744}
-  - component: {fileID: 5052654630666776353}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2942663124302950500
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.522848, y: 5.573343, z: 3.4386249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4906425372239087336}
   - {fileID: 6722483928629605026}
   - {fileID: 2169297490200725033}
   - {fileID: 2842966018100786771}
-  m_Father: {fileID: 1320220291013431838}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8446020386241866736
+--- !u!54 &6352161753238650621
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
@@ -86,13 +56,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3378844928995937735
+--- !u!114 &285189336668117194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -127,7 +97,7 @@ MonoBehaviour:
   m_OnActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3638885126367645495}
+      - m_Target: {fileID: 2264968670518401594}
         m_TargetAssemblyTypeName: SplitFruit, Assembly-CSharp
         m_MethodName: Split
         m_Mode: 1
@@ -175,13 +145,13 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &3638885126367645495
+--- !u!114 &2264968670518401594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 153debc528ca0e240afd2a3a69a7a41f, type: 3}
@@ -189,13 +159,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splitPrefab: {fileID: 1806711339015469518, guid: 29a133cc48e522a4380bbb97f1d41d2a, type: 3}
   splitVFX: {fileID: 4677378909916362131, guid: 9fa5b7013b02ae447a2f247d6933a6a5, type: 3}
---- !u!114 &7603254038406753744
+--- !u!114 &4941870446580742365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0b9659d1db88474f999ab949d9efe8c, type: 3}
@@ -203,25 +173,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   amplitude: 0.5
---- !u!65 &5052654630666776353
+--- !u!65 &7714526672415619628
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.4391747, y: 1.146558, z: 1.6030039}
   m_Center: {x: -0.008772056, y: 0.07327887, z: -0.01901893}
+--- !u!114 &1899462062933267430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806711339015469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2100000, guid: affccf5f67e60974498f310218932c8e, type: 2}
+  id: 0
+  name: AppleWhole
+  fractionValue: 1
 --- !u!1001 &1842075531176239554
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
       propertyPath: m_RootOrder
@@ -295,7 +281,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
       propertyPath: m_RootOrder
@@ -369,7 +355,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
       propertyPath: m_RootOrder
@@ -443,7 +429,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7e2255085e9b39646be5bc06ce556ee3, type: 3}
       propertyPath: m_RootOrder
