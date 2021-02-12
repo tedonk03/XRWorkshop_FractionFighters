@@ -1820,8 +1820,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cf0578d45881e3a42a318270647817c4, type: 3}
     volume: 0.94
     volumeVariance: 0.489
-<<<<<<< Updated upstream
-=======
     loop: 1
     source: {fileID: 0}
   - name: explosion
@@ -1834,7 +1832,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b280893ee17cf5d40ba811abf551ad53, type: 3}
     volume: 0.94
     volumeVariance: 0.489
->>>>>>> Stashed changes
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1240308927
