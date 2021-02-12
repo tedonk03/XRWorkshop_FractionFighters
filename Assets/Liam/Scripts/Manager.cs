@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         GenerateRecipe();
+        cauldron.CauldronBubble();
 
         foreach (RecipeComponent c in theRecipe.components)
         {
@@ -45,17 +46,24 @@ public class Manager : MonoBehaviour
 
     public void OpenMainMenu()
     {
+        audio.Play("click");
         mainMenu.ToggleMenu(true);
+        foreach(Sound s in audio.sounds)
+        {
+            s.source.Stop();
+        }
     }
 
     public void CloseMainMenu()
     {
+        audio.Play("click");
         mainMenu.ToggleMenu(false);
     }
 
     public void QuitApplication()
     {
-        
+        audio.Play("click");
+        Application.Quit();
     }
 
     public void StartGame()
@@ -65,6 +73,8 @@ public class Manager : MonoBehaviour
         {
             Destroy(obj);
         }
+
+        audio.Play("bgm");
 
         mainMenu.ToggleMenu(false);
         GenerateRecipe();
@@ -83,6 +93,7 @@ public class Manager : MonoBehaviour
 
     public void ConfirmAnswer()
     {
+        audio.Play("click");
         //Check if the ingredient is correct
         if (cauldron.CheckIngredients(theRecipe.currentIngrIndex))
         {
@@ -107,7 +118,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
-            audio.Play("fail");
+            audio.Play("explosion");
             cauldron.ResetCauldron();
         }
     }
