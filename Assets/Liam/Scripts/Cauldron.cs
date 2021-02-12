@@ -10,19 +10,9 @@ public class Cauldron : MonoBehaviour
     private float ingredientAmount;
     private Manager manager;
 
-    //Counter to keep track of which ingredient in the recipe the player is currently trying to deal with
-
-
-    // Start is called before the first frame update
-    void Start()
+    public void CauldronBubble()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        FindObjectOfType<AudioManager>().Play("bubbling");
     }
 
     public void ResetCauldron()
