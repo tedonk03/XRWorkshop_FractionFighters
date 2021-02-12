@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4941870446580742365}
   - component: {fileID: 7714526672415619628}
   - component: {fileID: 1899462062933267430}
+  - component: {fileID: 8871431469709521823}
   m_Layer: 0
   m_Name: apple1
   m_TagString: Ingredient
@@ -202,6 +203,18 @@ MonoBehaviour:
   id: 0
   name: AppleWhole
   fractionValue: 1
+--- !u!114 &8871431469709521823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806711339015469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1842075531176239554
 PrefabInstance:
   m_ObjectHideFlags: 0

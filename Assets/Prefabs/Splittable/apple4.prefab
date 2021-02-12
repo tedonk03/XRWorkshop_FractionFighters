@@ -150,6 +150,18 @@ MonoBehaviour:
   id: 0
   name: AppleQuart
   fractionValue: 0.25
+--- !u!114 &-1102727433054344771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6935521265256483041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7853857778162136496
 PrefabInstance:
   m_ObjectHideFlags: 0

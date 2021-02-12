@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1093371746915062965}
   - component: {fileID: 2357320021505201732}
   - component: {fileID: 5509785843806250122}
+  - component: {fileID: -1484643767805284949}
   m_Layer: 0
   m_Name: pumpkin1
   m_TagString: Ingredient
@@ -202,6 +203,18 @@ MonoBehaviour:
   id: 1
   name: PumpkinWhole
   fractionValue: 1
+--- !u!114 &-1484643767805284949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806711339015469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1470522169598744145
 PrefabInstance:
   m_ObjectHideFlags: 0

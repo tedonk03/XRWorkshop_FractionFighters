@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7024159224448258928}
   - component: {fileID: 5683646389497385345}
   - component: {fileID: 9158375735088553637}
+  - component: {fileID: 5605190847780425710}
   m_Layer: 0
   m_Name: butter1
   m_TagString: Ingredient
@@ -202,6 +203,18 @@ MonoBehaviour:
   id: 2
   name: butter
   fractionValue: 1
+--- !u!114 &5605190847780425710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806711339015469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2150358259736672788
 PrefabInstance:
   m_ObjectHideFlags: 0
