@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6455151792147978356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.597, z: 0}
+  m_LocalPosition: {x: 0, y: 1.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6455151792854907930}
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitPrefab: {fileID: 1806711339015469518, guid: ac46083f839678f459d9eb37784e34b5, type: 3}
   spawnPos: {fileID: 6455151792147978347}
+  ingredientType: 0
 --- !u!114 &6455151792854908135
 MonoBehaviour:
   m_ObjectHideFlags: 0
