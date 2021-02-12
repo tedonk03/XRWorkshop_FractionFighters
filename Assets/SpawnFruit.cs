@@ -26,7 +26,7 @@ public class SpawnFruit : MonoBehaviour
                 Destroy(fruit);
         }
 
-        var randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
-        GameObject.Instantiate(fruitPrefab, spawnPos.position, randomRotation);
+        //var randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
+        GameObject.Instantiate(fruitPrefab, spawnPos.position, Quaternion.identity);
     }
 }
