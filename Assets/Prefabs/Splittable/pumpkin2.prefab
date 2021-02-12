@@ -9,9 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320220291013431838}
+  - component: {fileID: 1663222040295543542}
+  - component: {fileID: 5532294904075728065}
+  - component: {fileID: 5790876878186575409}
+  - component: {fileID: 839523493480764630}
+  - component: {fileID: 2610992623727269415}
+  - component: {fileID: 4664525650442893918}
   m_Layer: 0
   m_Name: pumpkin2
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,58 +29,22 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806711339015469518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2942663124302950500}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2787923213268229775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2942663124302950500}
-  - component: {fileID: 8446020386241866736}
-  - component: {fileID: 3378844928995937735}
-  - component: {fileID: 3638885126367645495}
-  - component: {fileID: 7603254038406753744}
-  - component: {fileID: 5052654630666776353}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2942663124302950500
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.904292, y: 6.685577, z: 3.2446027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3899252666784411393}
   - {fileID: 3166182374636523000}
-  m_Father: {fileID: 1320220291013431838}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8446020386241866736
+--- !u!54 &1663222040295543542
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
@@ -84,13 +54,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3378844928995937735
+--- !u!114 &5532294904075728065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -125,7 +95,7 @@ MonoBehaviour:
   m_OnActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3638885126367645495}
+      - m_Target: {fileID: 5790876878186575409}
         m_TargetAssemblyTypeName: SplitFruit, Assembly-CSharp
         m_MethodName: Split
         m_Mode: 1
@@ -173,13 +143,13 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &3638885126367645495
+--- !u!114 &5790876878186575409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 153debc528ca0e240afd2a3a69a7a41f, type: 3}
@@ -187,13 +157,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splitPrefab: {fileID: 8457283157856705860, guid: 97948b7bff229a74aa30902a5f8dacde, type: 3}
   splitVFX: {fileID: 4677378909916362131, guid: 9fa5b7013b02ae447a2f247d6933a6a5, type: 3}
---- !u!114 &7603254038406753744
+--- !u!114 &839523493480764630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0b9659d1db88474f999ab949d9efe8c, type: 3}
@@ -201,25 +171,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   amplitude: 0.5
---- !u!65 &5052654630666776353
+--- !u!65 &2610992623727269415
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787923213268229775}
+  m_GameObject: {fileID: 1806711339015469518}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.4391747, y: 1, z: 0.89070433}
   m_Center: {x: -0.008772016, y: 0, z: 0.3371304}
+--- !u!114 &4664525650442893918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806711339015469518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2100000, guid: da5776e7d4c2ba84cb56e0ad36fbe39c, type: 2}
+  id: 1
+  name: PumpkinHalf
+  fractionValue: 0.5
 --- !u!1001 &3204930594935761427
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 844ec62b22a748b4c869061d7a00950b, type: 3}
       propertyPath: m_RootOrder
@@ -281,7 +267,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2942663124302950500}
+    m_TransformParent: {fileID: 1320220291013431838}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 844ec62b22a748b4c869061d7a00950b, type: 3}
       propertyPath: m_RootOrder

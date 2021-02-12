@@ -16,6 +16,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5506331891126173948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457283157856705860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.007669258, y: 0.0073968745, z: 0.007870949}
+  m_Center: {x: -0.003834629, y: -0.003698439, z: 0.00052882585}
+--- !u!114 &1826082967554358442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457283157856705860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2100000, guid: da5776e7d4c2ba84cb56e0ad36fbe39c, type: 2}
+  id: 1
+  name: PumpkinQuart
+  fractionValue: 0.25
 --- !u!114 &6814396109419723427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,19 +122,6 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!65 &5506331891126173948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8457283157856705860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.007669258, y: 0.0073968745, z: 0.007870949}
-  m_Center: {x: -0.003834629, y: -0.003698439, z: 0.00052882585}
 --- !u!1001 &8763767280778371093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,6 +176,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 844ec62b22a748b4c869061d7a00950b, type: 3}
       propertyPath: m_Name
       value: pumpkin4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 844ec62b22a748b4c869061d7a00950b, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844ec62b22a748b4c869061d7a00950b, type: 3}
