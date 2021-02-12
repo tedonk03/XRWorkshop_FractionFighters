@@ -74,7 +74,7 @@ public class Manager : MonoBehaviour
     public void GenerateRecipe()
     {
         Recipe newRecipe = new Recipe();
-        newRecipe.GenerateComponents(2, ingredients);
+        newRecipe.GenerateComponents(Random.Range(2, 7), ingredients);
         newRecipe.GenerateRecipeName();
         theRecipe = newRecipe;
         //currentComponent = 0;
