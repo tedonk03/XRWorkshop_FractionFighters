@@ -200,7 +200,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   id: 3
   name: cheeseHalf
-  fractionValue: 0.25
+  fractionValue: 0.5
 --- !u!114 &2659398000109101155
 MonoBehaviour:
   m_ObjectHideFlags: 0

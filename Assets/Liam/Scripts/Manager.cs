@@ -12,6 +12,12 @@ public class Manager : MonoBehaviour
     private AudioManager audio;
     public Menu mainMenu;
 
+    public GameObject vfxOK;
+    public GameObject vfxFail;
+    public GameObject vfxRecipeSuccess;
+    public Transform spawnPos;
+
+
     private void Awake()
     {
         audio = FindObjectOfType<AudioManager>();
@@ -104,6 +110,8 @@ public class Manager : MonoBehaviour
                 Debug.Log("Moving to next component");
                 theRecipe.currentIngrIndex++;
                 cauldron.ResetCauldron();
+
+                GameObject.Instantiate(vfxOK, spawnPos.position, Quaternion.identity);
                 audio.Play("correct");
                 //Next component
                 recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
@@ -111,6 +119,7 @@ public class Manager : MonoBehaviour
             else
             {
                 //Recipe is complete
+                GameObject.Instantiate(vfxRecipeSuccess, spawnPos.position, Quaternion.identity);
                 audio.Play("success");
                 Debug.Log("Recipe is done");
                 NextRecipe();
@@ -118,6 +127,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
+            GameObject.Instantiate(vfxFail, spawnPos.position, Quaternion.identity);
             audio.Play("explosion");
             cauldron.ResetCauldron();
         }
