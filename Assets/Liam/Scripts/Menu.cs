@@ -6,6 +6,7 @@ public class Menu : MonoBehaviour
 {
     public void ToggleMenu(bool status)
     {
+        FindObjectOfType<AudioManager>().Play("click");
         gameObject.SetActive(status);
     }
 
