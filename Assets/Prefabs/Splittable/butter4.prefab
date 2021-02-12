@@ -29,6 +29,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.007884864, z: 0.01591613}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1696239352780846981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564345648534200584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  id: 2
+  name: butterQuart
+  fractionValue: 0.25
 --- !u!114 &1285271606278426518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5ddd68b416d9f24c931717b72d59dca, type: 3}
       propertyPath: m_Name
       value: butter4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5ddd68b416d9f24c931717b72d59dca, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5ddd68b416d9f24c931717b72d59dca, type: 3}

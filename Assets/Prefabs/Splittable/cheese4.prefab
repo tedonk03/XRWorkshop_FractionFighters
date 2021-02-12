@@ -106,6 +106,22 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &3264289549350462929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268389844813782337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40342671a5bb6a45a1f84726653ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  id: 3
+  name: cheeseQuart
+  fractionValue: 0.25
 --- !u!114 &7612796717683102444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8ba62f23f11c4c84b98533d791b8a3db, type: 3}
       propertyPath: m_Name
       value: cheese4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8ba62f23f11c4c84b98533d791b8a3db, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba62f23f11c4c84b98533d791b8a3db, type: 3}
