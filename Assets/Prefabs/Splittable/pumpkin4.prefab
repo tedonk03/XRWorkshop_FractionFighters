@@ -29,6 +29,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.007669258, y: 0.0073968745, z: 0.007870949}
   m_Center: {x: -0.003834629, y: -0.003698439, z: 0.00052882585}
+--- !u!114 &-1896302509740403920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457283157856705860}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1826082967554358442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +57,20 @@ MonoBehaviour:
   id: 1
   name: PumpkinQuart
   fractionValue: 0.25
+--- !u!114 &3476714041051150048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457283157856705860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153debc528ca0e240afd2a3a69a7a41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splitPrefab: {fileID: 0}
+  splitVFX: {fileID: 0}
 --- !u!114 &6814396109419723427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +127,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -122,18 +148,6 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
---- !u!114 &-1896302509740403920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8457283157856705860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b9229c6b26a074da0bdf475a455659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8763767280778371093
 PrefabInstance:
   m_ObjectHideFlags: 0
