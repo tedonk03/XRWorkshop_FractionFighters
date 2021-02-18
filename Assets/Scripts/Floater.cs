@@ -47,9 +47,4 @@ public class Floater : MonoBehaviour
         tempPos.y = tempVal.y + amplitude * Mathf.Sin(speed * Time.time);
         transform.position = tempPos;
     }
-
-    private void Rotate()
-    {
-        transform.Rotate(0, 0, 2);
-    }
 }

@@ -62,12 +62,14 @@ public class Cauldron : MonoBehaviour
             Ingredient ingrt = other.GetComponent<Ingredient>();
             if(ingrt.id == currentRecipe.components[currentRecipe.currentIngrIndex].ingredient.id)
             {
+                FindObjectOfType<AudioManager>().Play("explosion");
                 Debug.Log("Correct Ingredient");
                 currentIngredient = ingrt;
                 ingredientAmount += ingrt.fractionValue;
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("fail");
                 Debug.Log("Wrong ingredient! Try again!");
                 currentIngredient = null;
                 ingredientAmount = 0f;

@@ -111,7 +111,7 @@ public class Manager : MonoBehaviour
                 theRecipe.currentIngrIndex++;
                 cauldron.ResetCauldron();
 
-                GameObject.Instantiate(vfxOK, spawnPos.position, Quaternion.identity);
+                //GameObject.Instantiate(vfxOK, spawnPos.position, Quaternion.identity);
                 audio.Play("correct");
                 //Next component
                 recipeDisplay.HighlightCurrentComponent(theRecipe.currentIngrIndex);
@@ -119,7 +119,7 @@ public class Manager : MonoBehaviour
             else
             {
                 //Recipe is complete
-                GameObject.Instantiate(vfxRecipeSuccess, spawnPos.position, Quaternion.identity);
+                //GameObject.Instantiate(vfxRecipeSuccess, spawnPos.position, Quaternion.identity);
                 audio.Play("success");
                 Debug.Log("Recipe is done");
                 NextRecipe();
@@ -127,7 +127,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
-            GameObject.Instantiate(vfxFail, spawnPos.position, Quaternion.identity);
+            //GameObject.Instantiate(vfxFail, spawnPos.position, Quaternion.identity);
             audio.Play("explosion");
             cauldron.ResetCauldron();
         }
